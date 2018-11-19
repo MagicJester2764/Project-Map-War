@@ -1,0 +1,4 @@
+:options
+echo nothing to see here
+pause
+goto mainmenu
