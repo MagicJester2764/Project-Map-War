@@ -1,0 +1,112 @@
+:startgame
+cls
+echo New Game(1)
+echo Load Game(2)
+
+set/p "cho=>"
+if %cho%==1 goto newgame
+if %cho%==2 goto loadgame
+
+:newgame
+cls
+echo Map of The Current World:
+echo.
+echo.
+echo JJJJIIIIHHHGGGGGGF
+echo  DDDDDMMMMMMMEEEE
+echo   AAAAAAAAAKKKKK
+echo    AAALLLLLLLLL
+echo     AAAAABBBBB
+echo.
+echo    CCCCCCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+pause
+echo Currently, you can only play as Country, A, Z, and C.
+echo Country A is Peaceful, Country Z is Neutral, and Country C is Aggressive.
+echo.
+echo Country A(1)
+echo Country Z(2)
+echo Country C(3)
+set/p "cho=>"
+if %cho%==1 goto countrya
+if %cho%==2 goto countryz
+if %cho%==3 goto countryc
+goto newgame
+
+:loadgame
+echo nothing to see here
+pause
+goto startgame
+
+:countrya
+cls
+echo Map of The Current World:
+echo.
+echo.
+echo JJJJIIIIHHHGGGGGGF
+echo  DDDDDMMMMMMMEEEE
+echo   AAAAAAAAAKKKKK
+echo    AAALLLLLLLLL
+echo     AAAAABBBBB
+echo.
+echo    CCCCCCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+pause
+echo Country C has declared war on Country Z!
+color 24
+echo Would you like to intervene(1) or no(2)?
+set/p "cho=>"
+if %cho%==1 goto yes
+	:yes
+	echo Press any key to naval invade Country C
+	pause
+	cls
+	echo Map of The Current World:
+	echo.
+	echo.
+	echo JJJJIIIIHHHGGGGGGF
+	echo  DDDDDMMMMMMMEEEE
+	echo   AAAAAAAAAKKKKK
+	echo    AAALLLLLLLLL
+	echo     AAAAABBBBB
+	echo.
+	echo    ACCACCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+	pause
+	echo Meet up(1) or Invade elsewhere(2)
+	
+		:meetup
+		cls
+	echo Map of The Current World:
+	echo.
+	echo.
+	echo JJJJIIIIHHHGGGGGGF
+	echo  DDDDDMMMMMMMEEEE
+	echo   AAAAAAAAAKKKKK
+	echo    AAALLLLLLLLL
+	echo     AAAAABBBBB
+	echo.
+	echo    AAAACCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+	pause
+		
+		:invadeelsewhere
+		
+	:no
+	echo We shall see how this war turns out.
+	pause
+	echo Country Z has called you into the war!
+	pause
+	goto yes
+
+:countryz
+
+:countryc
