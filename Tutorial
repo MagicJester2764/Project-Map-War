@@ -1,0 +1,110 @@
+:starttutorial
+echo 250 years later...
+pause
+cls
+echo Map of The Current World:
+echo.
+echo.
+echo JJJJIIIIHHHGGGGGGF
+echo  DDDDDMMMMMMMEEEE
+echo   AAAAAAAAAKKKKK
+echo    AAALLLLLLLLL
+echo     AAAAABBBBB
+echo.
+echo    CCCCCCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+echo   CCCCCCCSSSSSSSSSSRRRRRQQQQPPPPPPPPPPPPPPPPP
+echo CCCCCCCCCSSSSSSSRRRRRRRQQQQQPPPPPPPPPPPPPPPPP
+pause
+echo There are alignments for the different countries.
+pause
+cls
+echo The alignments are Peaceful, Aggressive, and Neutral.
+pause
+cls
+echo Peaceful countries can only declare war on Aggressive countries that have caused chaos, Aggressive countries can declare war on anyone at anytime, and Neutral countries can't declare
+echo war at all but they can fight back.
+pause
+cls
+echo Now it's time for you to play!
+echo For this tutorial, you will be playing as Country Q, which is an Aggressive country.
+pause
+cls
+echo You are going to be declaring war on Country R, which is a Neutral country.
+pause
+cls
+echo Press D to declare war on a country...
+set/p "cho=>"
+if %cho%==D goto declarewar
+
+:declarewar
+color 24
+echo You declared war on Country R!
+pause
+echo Press 1 to invade upper part of Country R, and 2 to invade the lower
+echo part.
+set/p "cho=>"
+if %cho%==1 goto choice1
+if %cho%==2 goto choice2
+:choice1
+cls
+echo Map of The Current World:
+echo.
+echo.
+echo JJJJIIIIHHHGGGGGGF
+echo  DDDDDMMMMMMMEEEE
+echo   AAAAAAAAAKKKKK
+echo    AAALLLLLLLLL
+echo     AAAAABBBBB
+echo.
+echo    CCCCCCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+echo   CCCCCCCSSSSSSSSSSRQQQQQQQQPPPPPPPPPPPPPPPPP
+echo CCCCCCCCCSSSSSSSRRRRRRRQQQQQPPPPPPPPPPPPPPPPP
+pause
+goto wintutorialwar
+
+:choice2
+cls
+echo Map of The Current World:
+echo.
+echo.
+echo JJJJIIIIHHHGGGGGGF
+echo  DDDDDMMMMMMMEEEE
+echo   AAAAAAAAAKKKKK
+echo    AAALLLLLLLLL
+echo     AAAAABBBBB
+echo.
+echo    CCCCCCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+echo   CCCCCCCSSSSSSSSSSRRRRRQQQQPPPPPPPPPPPPPPPPP
+echo CCCCCCCCCSSSSSSSRRRQQQQQQQQQPPPPPPPPPPPPPPPPP
+goto wintutorialwar
+:wintutorialwar
+echo Press 1 to finish them!
+set/p "cho=>"
+if %cho%==1 goto finishtutorial
+:endtutorial
+cls
+echo Map of The Current World:
+echo.
+echo.
+echo JJJJIIIIHHHGGGGGGF
+echo  DDDDDMMMMMMMEEEE
+echo   AAAAAAAAAKKKKK
+echo    AAALLLLLLLLL
+echo     AAAAABBBBB
+echo.
+echo    CCCCCCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+pause
+echo You won the war!
+color 21
+pause
+cls
+echo Congratulations! You beat the tutorial!
+pause
+cls
+goto mainmenu
