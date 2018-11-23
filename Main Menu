@@ -10,7 +10,7 @@ if %cho%==1 goto startgame
 if %cho%==2 goto options
 if %cho%==3 goto starttutorial
 if %cho%==4 goto mapexample
-if %cho%==5 exit
+if %cho%==5 goto exit
 if %cho%==debug goto debug
 cls
 goto mainmenu
