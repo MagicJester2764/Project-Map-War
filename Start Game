@@ -61,9 +61,11 @@ color 24
 echo Would you like to intervene(1) or no(2)?
 set/p "cho=>"
 if %cho%==1 goto yes
+if %cho%==2 goto no
 	:yes
+	cls
 	echo Press any key to naval invade Country C
-	pause
+	set/p "yeet=>"
 	cls
 	echo Map of The Current World:
 	echo.
@@ -74,31 +76,69 @@ if %cho%==1 goto yes
 	echo    AAALLLLLLLLL
 	echo     AAAAABBBBB
 	echo.
-	echo    ACCACCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+	echo    ACCACCCZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
 	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
 	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
 	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
 	pause
 	echo Meet up(1) or Invade elsewhere(2)
+	set/p "cho=>"
+	if %cho%==1 goto meetup
+	if %cho%==2 goto invadeelsewhere
 	
 		:meetup
 		cls
-	echo Map of The Current World:
-	echo.
-	echo.
-	echo JJJJIIIIHHHGGGGGGF
-	echo  DDDDDMMMMMMMEEEE
-	echo   AAAAAAAAAKKKKK
-	echo    AAALLLLLLLLL
-	echo     AAAAABBBBB
-	echo.
-	echo    AAAACCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
-	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
-	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
-	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
-	pause
+		echo Map of The Current World:
+		echo.
+		echo.
+		echo JJJJIIIIHHHGGGGGGF
+		echo  DDDDDMMMMMMMEEEE
+		echo   AAAAAAAAAKKKKK
+		echo    AAALLLLLLLLL
+		echo     AAAAABBBBB
+		echo.
+		echo    AAAACCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+		echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+		echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+		echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+		pause
+		echo Invade down south(1) or invade right(2)
+		set/p "cho=>"
+		if %cho%==1 goto invadedownsouth
+		if %cho%==2 goto invaderight
+		
+			:invadedownsouth
+			
+			:invaderight
+			
 		
 		:invadeelsewhere
+		cls
+		pause
+		cls
+		echo Map of The Current World:
+		echo.
+		echo.
+		echo JJJJIIIIHHHGGGGGGF
+		echo  DDDDDMMMMMMMEEEE
+		echo   AAAAAAAAAKKKKK
+		echo    AAALLLLLLLLL
+		echo     AAAAABBBBB
+		echo.
+		echo    ACCACCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+		echo     ACAAATTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+		echo   AAACCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+		echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+		pause
+		echo Meet together(1) or continue to split up(2)
+		set/p "cho=>"
+		%cho%==1 goto meettogether
+		%cho%==2 goto continuetosplitup
+		
+			:meettogether
+			
+			:continuetosplitup
+			
 		
 	:no
 	echo We shall see how this war turns out.
@@ -108,5 +148,11 @@ if %cho%==1 goto yes
 	goto yes
 
 :countryz
+echo I lied :(
+pause
+goto newgame
 
 :countryc
+echo I lied :(
+pause
+goto newgame
