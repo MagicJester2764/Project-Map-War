@@ -6,8 +6,10 @@ echo Load Game(2)
 set/p "cho=>"
 if %cho%==1 goto newgame
 if %cho%==2 goto loadgame
+goto startgame
 
 :newgame
+color 21
 cls
 echo Map of The Current World:
 echo.
@@ -85,6 +87,7 @@ if %cho%==2 goto no
 	set/p "cho=>"
 	if %cho%==1 goto meetup
 	if %cho%==2 goto invadeelsewhere
+	goto yes
 	
 		:meetup
 		cls
@@ -106,15 +109,85 @@ if %cho%==2 goto no
 		set/p "cho=>"
 		if %cho%==1 goto invadedownsouth
 		if %cho%==2 goto invaderight
+		goto meetup
 		
 			:invadedownsouth
+			cls
+			echo Map of The Current World:
+			echo.
+			echo.
+			echo JJJJIIIIHHHGGGGGGF
+			echo  DDDDDMMMMMMMEEEE
+			echo   AAAAAAAAAKKKKK
+			echo    AAALLLLLLLLL
+			echo     AAAAABBBBB
+			echo.
+			echo    AACCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+			echo     AAACCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+			echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+			echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+			pause
+			cls
+			echo Map of The Current World:
+			echo.
+			echo.
+			echo JJJJIIIIHHHGGGGGGF
+			echo  DDDDDMMMMMMMEEEE
+			echo   AAAAAAAAAKKKKK
+			echo    AAALLLLLLLLL
+			echo     AAAAABBBBB
+			echo.
+			echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+			echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+			echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+			echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+			pause
+			echo YOU LOST!
+			echo Start a new game(1) or quit(2)
+			set/p "cho=>"
+			if %cho%==1 goto newgame
+			if %cho%==2 goto exit
+			goto invadedownsouth
 			
 			:invaderight
-			
+			cls
+			echo Map of The Current World:
+			echo.
+			echo.
+			echo JJJJIIIIHHHGGGGGGF
+			echo  DDDDDMMMMMMMEEEE
+			echo   AAAAAAAAAKKKKK
+			echo    AAALLLLLLLLL
+			echo     AAAAABBBBB
+			echo.
+			echo    CCCCCCACZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+			echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+			echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+			echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+			pause
+			cls
+			echo Map of The Current World:
+			echo.
+			echo.
+			echo JJJJIIIIHHHGGGGGGF
+			echo  DDDDDMMMMMMMEEEE
+			echo   AAAAAAAAAKKKKK
+			echo    AAALLLLLLLLL
+			echo     AAAAABBBBB
+			echo.
+			echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+			echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+			echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+			echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+			pause
+			echo YOU LOST!
+			echo Start a new game(1) or quit(2)
+			set/p "cho=>"
+			if %cho%==1 goto newgame
+			if %cho%==2 goto exit
+			goto invaderight
 		
 		:invadeelsewhere
-		cls
-		pause
 		cls
 		echo Map of The Current World:
 		echo.
@@ -132,20 +205,248 @@ if %cho%==2 goto no
 		pause
 		echo Meet together(1) or continue to split up(2)
 		set/p "cho=>"
-		%cho%==1 goto meettogether
-		%cho%==2 goto continuetosplitup
+		if %cho%==1 goto meettogether
+		if %cho%==2 goto continuetosplitup
+		goto invadeelsewhere
 		
 			:meettogether
+			cls
+			echo Map of The Current World:
+			echo.
+			echo.
+			echo JJJJIIIIHHHGGGGGGF
+			echo  DDDDDMMMMMMMEEEE
+			echo   AAAAAAAAAKKKKK
+			echo    AAALLLLLLLLL
+			echo     AAAAABBBBB
+			echo.
+			echo    AAAACCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+			echo     AAAAATTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+			echo   AAAAACCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+			echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+			pause
+			echo Finish off the right side(1) or go down south(2)
+			set/p "cho=>"
+			if %cho%==1 goto finishofftherightside
+			if %cho%==2 goto godownsouth
+			goto meettogether
+			
+				:finishofftherightside
+				cls
+				echo Map of The Current World:
+				echo.
+				echo.
+				echo JJJJIIIIHHHGGGGGGF
+				echo  DDDDDMMMMMMMEEEE
+				echo   AAAAAAAAAKKKKK
+				echo    AAALLLLLLLLL
+				echo     AAAAABBBBB
+				echo.
+				echo    AAAAAAAAZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+				echo     AAAAATTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+				echo   AAAAAAASSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+				echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+				pause
+				echo Press any key to finish off Country C
+				pause
+				cls
+				echo Map of The Current World:
+				echo.
+				echo.
+				echo JJJJIIIIHHHGGGGGGF
+				echo  DDDDDMMMMMMMEEEE
+				echo   AAAAAAAAAKKKKK
+				echo    AAALLLLLLLLL
+				echo     AAAAABBBBB
+				echo.
+				echo    AAAAAAAAZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+				echo     AAAAATTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+				echo   AAAAAAASSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+				echo AAAAAAAAASSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+				pause
+				echo YOU WON!
+				echo Start a new game(1) or exit(2)
+				set/p "cho=>"
+				if %cho%==1 goto newgame
+				if %cho%==2 goto exit
+				goto finishofftherightside				
+			
+				:godownsouth
+				cls
+				echo Map of The Current World:
+				echo.
+				echo.
+				echo JJJJIIIIHHHGGGGGGF
+				echo  DDDDDMMMMMMMEEEE
+				echo   AAAAAAAAAKKKKK
+				echo    AAALLLLLLLLL
+				echo     AAAAABBBBB
+				echo.
+				echo    AACCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+				echo     AAACCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+				echo   AAACCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+				echo AAAAAAACCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+				pause
+				echo Press any key to push to the right
+				cls
+				echo Map of The Current World:
+				echo.
+				echo.
+				echo JJJJIIIIHHHGGGGGGF
+				echo  DDDDDMMMMMMMEEEE
+				echo   AAAAAAAAAKKKKK
+				echo    AAALLLLLLLLL
+				echo     AAAAABBBBB
+				echo.
+				echo    AAAACCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+				echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+				echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+				echo ACCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+				pause
+				cls
+				echo Map of The Current World:
+				echo.
+				echo.
+				echo JJJJIIIIHHHGGGGGGF
+				echo  DDDDDMMMMMMMEEEE
+				echo   AAAAAAAAAKKKKK
+				echo    AAALLLLLLLLL
+				echo     AAAAABBBBB
+				echo.
+				echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+				echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+				echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+				echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+				pause
+				echo YOU LOST!
+				echo Start a new game(1) or rage quit(2)
+				set/p "cho=>"
+				if %cho%==1 goto newgame
+				if %cho%==2 goto exit
+				goto godownsouth	
 			
 			:continuetosplitup
-			
+			cls
+			echo Map of The Current World:
+			echo.
+			echo.
+			echo JJJJIIIIHHHGGGGGGF
+			echo  DDDDDMMMMMMMEEEE
+			echo   AAAAAAAAAKKKKK
+			echo    AAALLLLLLLLL
+			echo     AAAAABBBBB
+			echo.
+			echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+			echo     CCAAATTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+			echo   CCCCCCASSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+			echo AACCCCCCASSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+			pause
+			cls
+			echo Map of The Current World:
+			echo.
+			echo.
+			echo JJJJIIIIHHHGGGGGGF
+			echo  DDDDDMMMMMMMEEEE
+			echo   AAAAAAAAAKKKKK
+			echo    AAALLLLLLLLL
+			echo     AAAAABBBBB
+			echo.
+			echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+			echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+			echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+			echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+			pause
+			echo YOU LOST!
+			echo Start a new game(1) or quit(2)
+			set/p "cho=>"
+			if %cho%==1 goto newgame
+			if %cho%==2 goto exit
+			goto continuetosplitup
 		
 	:no
 	echo We shall see how this war turns out.
 	pause
-	echo Country Z has called you into the war!
+	cls
+	echo Map of The Current World:
+	echo.
+	echo.
+	echo JJJJIIIIHHHGGGGGGF
+	echo  DDDDDMMMMMMMEEEE
+	echo   AAAAAAAAAKKKKK
+	echo    AAALLLLLLLLL
+	echo     AAAAABBBBB
+	echo.
+	echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
 	pause
-	goto yes
+	cls
+	echo Map of The Current World:
+	echo.
+	echo.
+	echo JJJJIIIIHHHGGGGGGF
+	echo  DDDDDMMMMMMMEEEE
+	echo   AAAAAAAAAKKKKK
+	echo    AAALLLLLLLLL
+	echo     CCCCCBBBBB
+	echo.
+	echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+	pause
+	cls
+	echo Map of The Current World:
+	echo.
+	echo.
+	echo JJJJIIIIHHHGGGGGGF
+	echo  DDDDDMMMMMMMEEEE
+	echo   AAAAAAAAAKKKKK
+	echo    CCCLLLLLLLLL
+	echo     CCCCCBBBBB
+	echo.
+	echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+	pause
+	cls
+	echo Map of The Current World:
+	echo.
+	echo.
+	echo JJJJIIIIHHHGGGGGGF
+	echo  DDDDDMMMMMMMEEEE
+	echo   CCCCAAAAAKKKKK
+	echo    CCCLLLLLLLLL
+	echo     CCCCCBBBBB
+	echo.
+	echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+	pause
+	cls
+	echo Map of The Current World:
+	echo.
+	echo.
+	echo JJJJIIIIHHHGGGGGGF
+	echo  DDDDDMMMMMMMEEEE
+	echo   CCCCCCCCCKKKKK
+	echo    CCCLLLLLLLLL
+	echo     CCCCCBBBBB
+	echo.
+	echo    CCCCCCCCZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
+	echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
+	echo   CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP
+	echo CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP
+	pause
+	echo YOU LOST YOU SELFISH JERK!
+	echo Start a new game(1) or quit because you're a big baby!(2)
+	set/p "cho=>"
+	if %cho%==1 goto errorlevel
+	if %cho%==2 goto mainmenu
+	goto no
 
 :countryz
 echo I lied :(
