@@ -3,14 +3,12 @@ cls
 echo Start Game(1)
 echo Options(2)
 echo Tutorial(3)
-echo Example Cutscene(4)
-echo Exit Game(5)
+echo Exit Game(4)
 set/p "cho=>"
 if %cho%==1 goto startgame
 if %cho%==2 goto options
 if %cho%==3 goto starttutorial
-if %cho%==4 goto mapexample
-if %cho%==5 goto exit
+if %cho%==4 goto exit
 if %cho%==debug goto debug_mainmenu
 cls
 goto mainmenu
