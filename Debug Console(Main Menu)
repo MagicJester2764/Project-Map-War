@@ -19,4 +19,4 @@ if %cho%==choice2 goto choice2
 if %cho%==wintutorialwar goto wintutorialwar
 if %cho%==endtutorial goto endtutorial
 if %cho%==startgame goto startgame
-goto debug
+goto debug_mainmenu
