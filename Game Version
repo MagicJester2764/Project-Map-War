@@ -1,0 +1,5 @@
+:gameversion
+echo THE CURRENT GAME VERSION IS 0.0.1
+pause
+cls
+goto debug
