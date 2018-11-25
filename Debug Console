@@ -1,7 +1,12 @@
-:debug
+:debug_mainmenu
 cls
 echo DEBUG CONSOLE:
 set/p "cho=>"
+if %cho%==mwargithubpage goto mwargithubpage
+:mwargithubpage
+start chrome.exe https://github.com/MagicJester2764/Project-Map-War
+goto debug_mainmenu
+
 if %cho%==init goto init
 if %cho%==gameversion goto gameversion
 if %cho%==mainmenu goto mainmenu
