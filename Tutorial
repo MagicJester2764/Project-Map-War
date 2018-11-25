@@ -1,6 +1,4 @@
 :starttutorial
-echo WARNING! THIS TUTORIAL IS NOW INACCURATE AND I AM TOO LAZY TO FIX IT!
-pause
 cls
 echo Map of The Current World:
 echo.
@@ -22,8 +20,8 @@ cls
 echo The alignments are Peaceful, Aggressive, and Neutral.
 pause
 cls
-echo Peaceful countries can only declare war on Aggressive countries that have caused chaos, Aggressive countries can declare war on anyone at anytime, and Neutral countries can't declare
-echo war at all but they can fight back.
+echo Peaceful countries can only declare war on Aggressive countries that have caused chaos, Aggressive countries can declare
+echo war on anyone at anytime, and Neutral countries can't delcare war at all but they can fight back.
 pause
 cls
 echo Now it's time for you to play!
@@ -33,15 +31,16 @@ cls
 echo You are going to be declaring war on Country R, which is a Neutral country.
 pause
 cls
-echo Press D to declare war on a country...
+echo Delcare war on Country R(1)
 set/p "cho=>"
-if %cho%==D goto declarewar
+if %cho%==1 goto declarewar
+goto starttutorial
 
 :declarewar
 color 24
 echo You declared war on Country R!
 pause
-echo Press 1 to invade upper part of Country R, and 2 to invade the lower
+echo Invade the upper part of Country R(1) or the lower part(2)
 echo part.
 set/p "cho=>"
 if %cho%==1 goto choice1
@@ -79,11 +78,12 @@ echo    CCCCCCZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN
 echo     CCCCCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO
 echo   CCCCCCCSSSSSSSSSSRRRRRQQQQPPPPPPPPPPPPPPPPP
 echo CCCCCCCCCSSSSSSSRRRQQQQQQQQQPPPPPPPPPPPPPPPPP
+pause
 goto wintutorialwar
 :wintutorialwar
 echo Press 1 to finish them!
 set/p "cho=>"
-if %cho%==1 goto finishtutorial
+if %cho%==1 goto endtutorial
 :endtutorial
 cls
 echo Map of The Current World:
