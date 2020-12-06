@@ -20,6 +20,7 @@ If you want to point out an issue, make sure to include:
 3. And of course, be specific about it.
 4. Don't name call.
 5. Don't email me about me about it, my email is for VERY specific concerns or questions that you COULD NOT find anywhere here.
+6. If the issue is in a file that is located in the branch "old-versions," it is not going to be fixed.
 --------------------------------------------
 Your very basic expectations EVERYWHERE around this page are:
 
