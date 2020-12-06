@@ -12,13 +12,13 @@ pmw_title()
 def clear_screen():
 	os.system("cls")
 
-m3e.gameversion = "0.1.0" # The "Phase" Update
+gameversion = "0.1.0" # The "Phase" Update
 	# 0.2.* is reserved for dynamics
 	# 0.1.1(mwar5) is reserved for colonization, and possibly an observe mode
 	# where all of the countries' decisions are randomized.
 	# eventually i would like to make an option where this happens in game, but
 	# this could be part of the dynamic update and not earlier.
-	# also in 0.1.1, Country F will be playable but every decision with be
+	# also in 0.1.1 or later, Country F will be playable but every decision with be
 	# random and therefore you don't really get to choose what you do
 	# also for either dynamic update or earlier, choosing "unhistorical"
 	# decisions will make other countries also choose different decisions,
@@ -28,6 +28,7 @@ m3e.gameversion = "0.1.0" # The "Phase" Update
 	# country can be interacted with in some way.
 	# also consider re-adding the debug menu as it could be useful and it
 	# would be easier to implement than if we used Batch.
+	#make countries O, N, and P be in a faction called "The Peacekeeping Front"
 
 def main_menu():
 	print("Start Game(1)")
@@ -422,13 +423,13 @@ def country_b():
 	clear_screen()
 	m3e.map()
 	print("")
-	print("Right now you can only delcare war on Country L, which is a Neutral country, or Country A, which is a Peaceful country.")
+	print("Right now you can only delcare war on Country A, which is a Peaceful country, or Country Z, which is a Neutral country.")
 	input("> ")
 	clear_screen()
 	m3e.map()
 	print("")
 	print("Invade Country A(1)")
-	print("Invade Country L(2)")
+	print("Invade Country Z(2)")
 
 	option = ""
 	while option != "1" and option != "2": # Makes sure that people don't just input random crap
@@ -549,10 +550,42 @@ def country_b():
 				option = input("> ")
 
 			if option == "1":
-				yes
+				clear_screen()
+				print("Map of the Current World:") #Invade back(Phase 4)
+				print("")
+				print("")
+				print("JJJJIIIIHHHGGGGGGF")
+				print(" DDDDDMMMMMMMEEEE ")
+				print("  AAAAAAAAAKKKKK  ")
+				print("   BBBLLLLLLLLL	 ")
+				print("    BBBBBBBBBB	 ")
+				print("")
+				print("   AAAAZZZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN")
+				print("    CCACCTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO")
+				print("  CCCCCCCSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP")
+				print("CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP")
+				print("")
+				print("Stay(1) or keep pushing.")
 
 			elif option == "2":
-				no
+				clear_screen()
+				print("Map of the Current World:") #Surrender(Phase 4)
+				print("")
+				print("")
+				print("JJJJIIIIHHHGGGGGGF")
+				print(" DDDDDMMMMMMMEEEE ")
+				print("  AAAAAAAAAKKKKK  ")
+				print("   AAALLLLLLLLL   ")
+				print("    AAAAAAAAAA    ")
+				print("")
+				print("   AAAAZZZZZYYYXWWVVVVVVVVVVOOOOOOOOONNNNNNNN")
+				print("    ZZZZZTTTTTTTTTUUUUUUUUUUOOOOOOOOOOOOOOOOO")
+				print("  CCZZZZZSSSSSSSSSSQQQQQQQQQPPPPPPPPPPPPPPPPP")
+				print("CCCCCCCCCSSSSSSSQQQQQQQQQQQQPPPPPPPPPPPPPPPPP")
+				print("")
+				print("You lose!")
+				input("> ")
+				country_b()
 
 		return option
 
